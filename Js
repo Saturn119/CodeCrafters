@@ -1,0 +1,40 @@
+// Helper function to calculate the average of an array of numbers
+function calculateAverage(numbers) {
+    const total = numbers.reduce((sum, num) => sum + num, 0);
+    return total / numbers.length;
+}
+
+// Helper function to find the maximum value in an array
+function findMax(numbers) {
+    return Math.max(...numbers);
+}
+
+// Helper function to find the minimum value in an array
+function findMin(numbers) {
+    return Math.min(...numbers);
+}
+
+// Helper function to filter out even numbers
+function filterEven(numbers) {
+    return numbers.filter(num => num % 2 === 0);
+}
+
+// Helper function to filter out odd numbers
+function filterOdd(numbers) {
+    return numbers.filter(num => num % 2 !== 0);
+}
+
+// Function to display the results
+function displayArrayResults(numbers) {
+    console.log(`Numbers: ${numbers}`);
+    console.log(`Average: ${calculateAverage(numbers)}`);
+    console.log(`Maximum: ${findMax(numbers)}`);
+    console.log(`Minimum: ${findMin(numbers)}`);
+    console.log(`Even numbers: ${filterEven(numbers)}`);
+    console.log(`Odd numbers: ${filterOdd(numbers)}`);
+}
+
+// Example usage
+const numbersArray = [10, 15, 20, 25, 30, 35, 40];
+
+displayArrayResults(numbersArray);
